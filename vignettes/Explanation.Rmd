@@ -1,0 +1,50 @@
+---
+title: "What the package does"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What the package does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753Avinash2025)
+```
+
+# Introduction 
+
+## scatterhist
+```{r}
+set.seed(123)
+x <- rnorm(100, mean = 50, sd = 10)
+y <- x + rnorm(100, mean = 0, sd = 5)
+
+scatterhist(x, y, xlab = "Random X", ylab = "Random Y")
+
+```
+
+## myncurve
+```{r}
+myncurve(mu = 10, sigma = 2, a = 12)
+
+```
+
+## myboot2
+```{r}
+set.seed(123)
+x <- rnorm(20, mean = 5, sd = 2)
+myboot2(x = x, fun = "mean")
+```
+
+## mymlnorn
+```{r}
+mymlnorm(x=c(0,12,13,15,12,11,10),mu=seq(5,15,length=1000),sig=seq(0.1,6,length=1000),lwd=2,labcex=1)
+```
+
